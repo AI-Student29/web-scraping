@@ -30,15 +30,7 @@ def crawler(url):
                         df1 = pd.DataFrame(rev)
                         df = df.append(df1)
                         df.to_csv('out.csv', mode='a', index=False, header=False)
-                        #print(type(rev[0]))
-
-                        '''
-                        import csv
-
-                        with open("out.csv", "a+") as f:
-                            writer = csv.writer(f)
-                            writer.writerows(rev)
-                        '''
+                        
                         crawler(new_link)
                     except:
                         continue
