@@ -34,10 +34,6 @@ def crawler(url):
                         crawler(new_link)
                     except:
                         continue
-                    #finalrev.append(rev)
-    #print(type(df[1]))
-    #print(len(df.columns))
-    #df.to_csv('out.csv', index=False)
     return df
 result = crawler('https://www.consumeraffairs.com/sporting_goods/nike.html')
 print(type(result))
